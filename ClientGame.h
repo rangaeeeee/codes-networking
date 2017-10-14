@@ -4,23 +4,18 @@
 #include "ClientNetwork.h"
 #include "NetworkData.h"
 
-
 class ClientGame
 {
-
 public:
-
-	ClientGame();
+	ClientGame(void);
 	~ClientGame(void);
 
 	ClientNetwork* network;
 
 	void sendActionPackets();
 
-	char network_data[MAX_PACKET_SIZE];
+    char network_data[MAX_PACKET_SIZE];
 
-	void update();
+    void update();
 };
-
-
 

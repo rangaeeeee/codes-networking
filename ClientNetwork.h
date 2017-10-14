@@ -2,9 +2,9 @@
 // Networking libraries
 #include <winsock2.h>
 #include <Windows.h>
-#include "NetworkService.h"
+#include "NetworkServices.h"
 #include <ws2tcpip.h>
-#include <stdio.h>
+#include <stdio.h> 
 #include "NetworkData.h"
 
 // size of our buffer
@@ -21,15 +21,16 @@ class ClientNetwork
 
 public:
 
-	// for error checking function calls in Winsock library
-	int iResult;
+    // for error checking function calls in Winsock library
+    int iResult;
 
-	// socket for client to connect to server
-	SOCKET ConnectSocket;
+    // socket for client to connect to server
+    SOCKET ConnectSocket;
 
-	// ctor/dtor
-	ClientNetwork(void);
-	~ClientNetwork(void);
+    // ctor/dtor
+    ClientNetwork(void);
+    ~ClientNetwork(void);
 
 	int receivePackets(char *);
 };
+
